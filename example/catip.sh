@@ -1,10 +1,10 @@
 #!/bin/bash
 
-IP=`curl ipinfo.io/ip`
+IP=`curl --connect-timeout 60 ipinfo.io/ip`
 ./main -msg=$IP
 
 while true; do
-    currentIp=`curl ipinfo.io/ip`
+    currentIp=`curl --connect-timeout 60 ipinfo.io/ip`
     if [ "$IP" == "$currentIp" ]; then
         echo "IP addr not change."
         echo $IP
