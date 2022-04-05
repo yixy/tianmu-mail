@@ -3,3 +3,5 @@ tianmu-mail.iml
 bin/
 src/
 pkg/
+*.tar.gz
+example/main
